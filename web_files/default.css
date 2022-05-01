@@ -1,0 +1,268 @@
+/**
+ * 
+ * All content on this website (including text, images, source
+ * code and any other original works), unless otherwise noted,
+ * is licensed under a Creative Commons License.
+ * 
+ * http://creativecommons.org/licenses/by-nc-sa/2.5/
+ * 
+ * Copyright (C) Open-Xchange Inc., 2006-2011
+ * Mail: info@open-xchange.com 
+ * 
+ * @author Matthias Biggeleben <matthias.biggeleben@open-xchange.com>
+ * 
+ */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+html {
+    background-color: #aaa;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color:#000;
+    line-height: 1.5em;
+}
+
+/* backgrounds */
+
+html.webkit {
+    background-image: -webkit-gradient(linear, 0% 50%, 0% 100%, from(#ccc), to(#333)); /* ccc to 555 */
+}
+
+html.firefox {
+    background-image: -moz-linear-gradient(center top, #eee, #555);
+}
+
+html.IE9 {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#555555');
+}
+
+/* upper logo */
+.login-top {
+    height: 27px;
+    margin-bottom: 20px;
+    background-image: url(logo.png);
+    background-position: -4px 0px;
+    background-repeat: no-repeat;
+    border-radius: 8px 8px 0px 0px;
+    -moz-border-radius: 8px 8px 0px 0px;
+    -webkit-border-radius: 8px 8px 0px 0px;
+}
+
+/* login dialog container */
+#loginPrompt {
+    background-color: #eee;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.webkit #loginPrompt {
+    -webkit-box-shadow: 0px 0px 30px 0px black;
+}
+
+.firefox #loginPrompt {
+    -moz-box-shadow: 0px 0px 30px 0px black;
+}
+
+.IE9 #loginPrompt {
+    box-shadow: 0px 0px 30px 0px #555;
+}
+
+.IE #loginPrompt {
+    border: 1px solid #888;
+    border-color: #888 #555 #444 #888;
+}
+
+/* ruler */
+.login-ruler {
+    border-top: 1px inset #efefef;
+}
+
+/* error messages */
+#loginStatus {
+    color: #800;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* bottom line */
+.login-bottomline {
+    height: 1.5em;
+    line-height: 1.5em;
+    padding: 5px 10px 5px 10px;
+    background-color: #eee;
+    color: #aaa;
+    text-align: right;
+    margin-top: 10px;
+    border-radius: 0px 0px 8px 8px;
+    -moz-border-radius: 0px 0px 8px 8px;
+    -webkit-border-radius: 0px 0px 8px 8px;
+}
+
+/* basic elements */
+
+a {
+    text-decoration: none;
+    color: #404962;
+}
+
+input, textarea, select {
+    border: solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    border-color: #C0C0C0 !important;
+}
+
+/* progress bar */
+#progress {
+    background-image: url(spinner.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50px;
+}
+
+#loadmessage_text {
+	text-align: center;
+	padding: 1em 0 0 0;
+}
+
+.borderDefault {
+    border: solid 1px;  
+}
+
+.border-color-default {
+    border-color: #eee !important;
+}
+
+/* table */
+
+.inputGridTable {
+    width: 100%;
+    empty-cells: show;
+    overflow-x: hidden;
+}
+
+.inputGridTable td {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    vertical-align: top;
+}
+
+/* Login field */
+#loginScreen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+#loginPrompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -142px;
+    margin-left: -197px;
+    width: 394px;
+    overflow-x: hidden;
+}
+
+#loginPrompt form {
+    margin: 0;
+}
+
+#loginPrompt td {
+    vertical-align: middle;
+}
+
+#publicMachineDiv{
+    font-size: 8pt;
+    line-height: 1.25em;
+    color: #008;
+}
+
+#privateMachineDiv{
+    font-size: 8pt;
+    line-height: 1.25em;
+    color: #008;
+}
+
+.background-color-default {
+    background-color: #E1E4EB;
+}
+
+.background-color-content, .cpbody-color {
+    background-color: #f5f5f5 !important;
+}
+
+.cpbottom-color {
+    background-color: #E8E8E8;
+}
+
+.font-color-disabled {
+    color: #818181;
+}
+
+/* 
+ * Button
+ */
+
+.ox-button {
+    font-size: 8pt;
+    line-height: 1.5em;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    color: black;
+    cursor: pointer;
+    padding: 3px 1em 3px 1em;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ox-button:hover {
+    border-color: #888;
+}
+
+/* firefox */
+.firefox .ox-button {
+    -moz-border-radius: 5px;
+    background-image: -moz-linear-gradient(center top, #ffffff, #efefef);
+}
+
+.firefox .ox-button:hover {
+    -moz-box-shadow: 0px 0px 4px #aaa;
+}
+
+/* webkit */
+.webkit .ox-button {
+    -webkit-border-radius: 5px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#EFEFEF));
+}
+
+.webkit .ox-button:hover {
+    -webkit-box-shadow: 0px 0px 4px #aaa;
+}
+
+/* IE9 */
+.IE9 .ox-button {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef');
+}
+
+.IE9 .ox-button:hover {
+    box-shadow: 0px 0px 4px #aaa;
+}
+
+/* end */
